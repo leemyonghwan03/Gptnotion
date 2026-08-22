@@ -1,6 +1,6 @@
 {
   "name": "gptnotion-modular",
-  "version": "3.0.0-modular",
+  "version": "3.1.0-perf-reliability",
   "private": true,
   "description": "Air-gapped GptNotion TypeScript + Python MCP modular workspace",
   "scripts": {

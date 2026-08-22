@@ -1,0 +1,136 @@
+{
+  "groups": [
+    {
+      "name": "legacy-script-00",
+      "classic": true,
+      "files": [
+        "00-01-01-core-constants-state-helpers.legacy.js",
+        "00-02-01a-operator-graph-helper-prelude.legacy.js",
+        "00-03-01b-local-sqlite-team-windows-folder-helpers.legacy.js",
+        "00-04-02-04-design-tokens-bootstrap-complete-single-internal-.legacy.js",
+        "00-05-05a-storage-mode-local-sqlite-bridge.legacy.js",
+        "00-06-05-indexeddb-layer.legacy.js",
+        "00-07-in-memory-write-through-cache-indexeddb-remains-source-.legacy.js",
+        "00-08-06-store-layer.legacy.js",
+        "00-09-06a-page-undo-redo-version-history.legacy.js",
+        "00-10-06b-page-system-settings-registry-operator-base.legacy.js",
+        "00-11-07-11-commands-layer-page-editor-link-database-ai.legacy.js",
+        "00-12-12-note-core-reliability-helpers.legacy.js",
+        "00-13-13-22-ui-shell-search-share-views-database-rendering-set.legacy.js",
+        "00-14-23-ai-page-create.legacy.js",
+        "00-15-23a-selected-range-ai-ai.legacy.js",
+        "00-16-23b-ai-cancel-retry-logging-ttl-cache.legacy.js",
+        "00-17-23c-ai-writing-helpers-background-operator.legacy.js",
+        "00-18-23d-automation-framework.legacy.js",
+        "00-19-23e-ai-context-helper.legacy.js",
+        "00-20-23f-operator-tools-phase1-scope-proposal-gate-within-page.legacy.js",
+        "00-21-23g-operator-phase2-cross-page.legacy.js",
+        "00-22-23h-page-ai-settings-integration.legacy.js",
+        "00-23-23i-phase3-trust-layer-diff-checkpoint-verify-diagnostics.legacy.js",
+        "00-24-23j-operator-phase4-universal-adapter-profiling-prelude.legacy.js",
+        "00-25-23k-operator-phase4-final-adapter-profile-probe-runtime-br.legacy.js",
+        "00-26-23l-operator-phase5-structured-execution-report-catalog-cov.legacy.js",
+        "00-27-23m-operator-phase6-local-mcp-persistent-jobs-prelude.legacy.js",
+        "00-28-23n-operator-phase6-local-mcp-engine-persistent-job-runtime.legacy.js",
+        "00-29-23o-operator-phase7-mcp-first-specialist-runtimes-operator-.legacy.js",
+        "00-30-23-ai-architecture.legacy.js",
+        "00-31-24-slash-mention-menus.legacy.js",
+        "00-32-24c-slash-helper.legacy.js",
+        "00-33-24d-table-editor-helpers.legacy.js",
+        "00-34-24e-document-board-mode-css-js.legacy.js",
+        "00-35-25-page-editor-core.legacy.js",
+        "00-36-25c-unified-block-renderer.legacy.js",
+        "00-37-25d-unified-image-file-renderer-legacy-compat.legacy.js",
+        "00-38-25e-writing-mode-a4-page-layout-unified-page-flow.legacy.js",
+        "00-39-27-more-views.legacy.js",
+        "00-40-27-7b-rag-engine.legacy.js",
+        "00-41-27-7c-rag-integration-settings-ui-rag-source-citations.legacy.js",
+        "00-42-27-7d-rag-전용-채팅-뷰-별도-ui-대화형-검색-범위-지정.legacy.js",
+        "00-43-27-7e-rag-전용-자료실-업로드-청크-저장.legacy.js",
+        "00-44-27-7f-rag-v2-hybrid-검색-설계-bm25-vector-exact-rrf-adaptive-rer.legacy.js",
+        "00-45-28-setting-screen.legacy.js",
+        "00-46-29-global-search.legacy.js",
+        "00-47-30-share-logic.legacy.js",
+        "00-48-20-21-import-export.legacy.js",
+        "00-49-31-ai-panel.legacy.js",
+        "00-50-32-event-wiring.legacy.js",
+        "00-51-26-app-bootstrap.legacy.js"
+      ]
+    },
+    {
+      "name": "legacy-script-01",
+      "classic": true,
+      "files": ["01-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-02",
+      "classic": true,
+      "files": ["02-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-03",
+      "classic": true,
+      "files": ["03-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-04",
+      "classic": true,
+      "files": ["04-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-05",
+      "classic": true,
+      "files": ["05-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-06",
+      "classic": true,
+      "files": ["06-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-07",
+      "classic": true,
+      "files": ["07-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-08",
+      "classic": true,
+      "files": ["08-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-09",
+      "classic": true,
+      "files": ["09-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-10",
+      "classic": true,
+      "files": ["10-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-11",
+      "classic": true,
+      "files": ["11-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-12",
+      "classic": true,
+      "files": ["12-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-13",
+      "classic": true,
+      "files": ["13-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-14",
+      "classic": true,
+      "files": ["14-patch.legacy.js"]
+    },
+    {
+      "name": "legacy-script-15",
+      "classic": true,
+      "files": ["15-patch.legacy.js", "16-perf-reliability.legacy.js"]
+    }
+  ]
+}

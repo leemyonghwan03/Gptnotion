@@ -78,7 +78,7 @@ try:
     bridge=evaluate("Boolean(window.__GPT_LEGACY__ && window.__GPT_LEGACY__.PageStore && window.__GPT_LEGACY__.BlockStore)")
     scripts=evaluate("document.scripts.length")
     app_dom=evaluate("Boolean(document.getElementById('app') && document.getElementById('sidebar') && document.getElementById('view-root'))")
-    if version!='3.0.0-modular': raise SystemExit(f'Modular dataset missing: {version!r}')
+    if version!='3.1.0-perf-reliability': raise SystemExit(f'Modular dataset missing: {version!r}')
     if api is not True: raise SystemExit('GptNotionModular public API missing')
     if bridge is not True: raise SystemExit('Legacy compatibility bridge missing PageStore/BlockStore')
     if not isinstance(scripts,(int,float)) or scripts < 18: raise SystemExit(f'Expected script groups not loaded: {scripts!r}')

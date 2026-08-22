@@ -12,6 +12,7 @@ frontend=ROOT/'frontend'/'dist'/'GptNotion.html'
 if not frontend.exists(): raise SystemExit('Build frontend first')
 shutil.copy2(frontend,package/'GptNotion.html')
 shutil.copy2(ROOT/'VERSION.json',package/'VERSION.json')
+# MCP source distribution: modular package + thin launcher. No pip/npm dependency is required at runtime.
 mcp_out=package/'MCP'; mcp_out.mkdir()
 shutil.copy2(ROOT/'mcp'/'main.py',mcp_out/'main.py')
 shutil.copytree(ROOT/'mcp'/'gptnotion_mcp',mcp_out/'gptnotion_mcp',ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
@@ -25,7 +26,19 @@ python main.py
 setlocal
 cd /d "%~dp0"
 start "GptNotion MCP" /min cmd /c call "%CD%\start_mcp.bat"
-timeout /t 2 /nobreak >nul
+set "MCP_READY="
+for /L %%I in (1,1,30) do (
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "try { $r=Invoke-WebRequest -UseBasicParsing -Uri 'http://127.0.0.1:37841/health' -TimeoutSec 1; if($r.StatusCode -eq 200){exit 0}else{exit 1} } catch { exit 1 }" >nul 2>nul
+  if not errorlevel 1 (
+    set "MCP_READY=1"
+    goto :mcp_ready
+  )
+  timeout /t 1 /nobreak >nul
+)
+echo GptNotion MCP health check failed. Check start_mcp.bat output.
+pause
+exit /b 1
+:mcp_ready
 start "" "%CD%\GptNotion.html"
 ''',encoding='utf-8')
 (package/'README.txt').write_text(

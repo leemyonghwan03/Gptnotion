@@ -1,12 +1,13 @@
 from __future__ import annotations
-import re, sys
+import json, re, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 p=ROOT/'frontend'/'dist'/'GptNotion.html'
 if not p.exists(): print('Built HTML missing');sys.exit(2)
 s=p.read_text(encoding='utf-8')
+app_version=json.loads((ROOT/'VERSION.json').read_text(encoding='utf-8'))['appVersion']
 checks={
-    'single HTML TS marker':'GptNotion TypeScript Modular Bundle 3.0.0-modular',
+    'single HTML TS marker':'GptNotion TypeScript Modular Bundle '+app_version,
     'legacy bridge':'window.__GPT_LEGACY__',
     'public modular api':'GptNotionModular',
     'PageStore':'const PageStore',
