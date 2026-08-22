@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gpt노션 · RAG V2.4 FAST</title>
+<!--GPTNOTION_STYLE-->
+</head>
+<body>
+<div id="app">
+  <div id="sidebar">
+    <div class="sidebar-top">
+      <div class="workspace-title">
+        <span>📓 Gpt노션</span>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="side-item" data-view="search"><span class="ic">🔍</span><span>검색</span><span style="margin-left:auto;font-size:10.5px;color:var(--text-faint);">⌘K</span></div>
+      <div class="side-item" data-view="inbox"><span class="ic">📥</span><span>Inbox</span></div>
+      <div class="side-item" data-view="favorites"><span class="ic">★</span><span>즐겨찾기</span></div>
+      <div class="side-item" data-view="recent"><span class="ic">🕓</span><span>최근 문서</span></div>
+      <div class="side-item" data-view="trash"><span class="ic">🗑</span><span>휴지통</span></div>
+      <div class="side-item" data-view="ragchat"><span class="ic">🔎</span><span>RAG 채팅</span></div>
+      <div class="side-item" data-view="raglibrary"><span class="ic">📚</span><span>RAG 자료실</span></div>
+      <div class="side-item" data-view="team"><span class="ic">👥</span><span>팀 페이지</span><span id="team-side-status" style="margin-left:auto;font-size:10.5px;color:var(--text-faint);">OFF</span></div>
+    </div>
+    <div class="side-label"><span>Pages</span><span class="add-btn" id="new-root-page" title="새 페이지">＋</span></div>
+    <div id="page-tree"></div>
+    <div class="side-label" id="team-pages-label"><span>Team Pages</span><span class="add-btn" id="new-team-root-page" title="새 팀 페이지">＋</span></div>
+    <div id="team-page-tree"></div>
+    <div class="sidebar-bottom">
+      <div class="side-item" data-view="settings"><span class="ic">⚙️</span><span>설정</span></div>
+      <div class="save-indicator" id="save-indicator"><span class="dot"></span><span id="save-text">저장됨</span></div>
+    </div>
+  </div>
+  <div class="resizer" id="sidebar-resizer"></div>
+  <div id="main">
+    <div id="topbar">
+      <div class="topbar-left">
+        <div class="sidebar-toggle" id="sidebar-toggle" title="사이드바 접기/펼치기">☰</div>
+        <div id="breadcrumb"></div>
+      </div>
+      <div class="topbar-right">
+        <div id="topbar-actions"></div>
+        <button class="icon-btn" id="ai-panel-toggle" title="AI 어시스턴트">🤖 AI</button>
+      </div>
+    </div>
+    <div id="editor-scroll">
+      <div id="view-root"></div>
+    </div>
+  </div>
+  <div class="resizer hidden" id="ai-panel-resizer"></div>
+  <div id="ai-panel" class="hidden">
+    <div class="ai-panel-header">
+      <span>🤖 AI 어시스턴트</span>
+      <span class="sidebar-toggle" id="ai-panel-close" title="닫기">✕</span>
+    </div>
+    <div id="ai-chat-log"></div>
+    <div class="ai-panel-input-wrap">
+      <div class="ai-cmd-input" id="ai-chat-input" contenteditable="true" data-placeholder="무엇이든 물어보거나 지시해보세요. @로 페이지를 언급할 수 있어요."></div>
+      <div class="ai-automation-tools">
+        <button class="btn" id="ai-automation-mode" type="button" aria-pressed="false" title="켜면 보내기 전에 자동화 요청을 7개 블록으로 정리합니다.">⚡ 자동화 모드</button>
+        <button class="btn" id="ai-automation-resolve" type="button" title="현재 입력을 Trigger·Condition·RAG·AI 판단·Action·Approval·Log 구조로 정리합니다.">✨ 요청 정리</button>
+      </div>
+      <div class="ai-operator-tools">
+        <button class="btn active" id="ai-operator-mode" type="button" aria-pressed="true" title="AI가 Gpt노션의 페이지·문서·표·DB·RAG·파일·Recipe·팀 도구를 직접 선택하고 연속 실행합니다.">🧠 Operator ON</button>
+        <button class="btn" id="ai-operator-tools" type="button" title="AI가 사용할 수 있는 Action/Tool 목록을 확인합니다.">🧰 도구</button>
+      </div>
+      <button class="btn btn-primary" id="ai-chat-send" style="width:100%;">보내기</button>
+    </div>
+  </div>
+</div>
+<div id="popup-layer"></div>
+<div id="modal-layer"></div>
+<div id="search-overlay" class="hidden"></div>
+<div id="command-palette-overlay" class="hidden"></div>
+<div id="toast-wrap"></div>
+
+<!--GPTNOTION_SCRIPTS-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="ragux-prestyle"></style>
+
+
+
+
+
+</body>
+</html>

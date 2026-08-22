@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gptnotion://contracts/mcp-tools.schema.json",
+  "title": "GptNotion MCP Call Contract",
+  "type": "object",
+  "required": ["name", "arguments"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "arguments": { "type": "object" },
+    "contractVersion": { "const": "1.0.0" }
+  },
+  "additionalProperties": false
+}

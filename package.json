@@ -1,0 +1,12 @@
+{
+  "name": "gptnotion-modular",
+  "version": "3.0.0-modular",
+  "private": true,
+  "description": "Air-gapped GptNotion TypeScript + Python MCP modular workspace",
+  "scripts": {
+    "typecheck": "tsc -p frontend/tsconfig.json --noEmit",
+    "compile": "tsc -p frontend/tsconfig.json",
+    "check": "python tools/forbidden_scan.py && tsc -p frontend/tsconfig.json --noEmit && python tools/check_contracts.py && python tools/check_legacy_js.py",
+    "build": "tsc -p frontend/tsconfig.json && python tools/build_frontend.py"
+  }
+}

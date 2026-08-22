@@ -1,0 +1,16 @@
+Forbidden-pattern scan: PASS
+Contract JSON validation: PASS
+Legacy JS syntax: PASS (16 script groups)
+MCP modular smoke: PASS (tools=76, indexedChunks=0)
+Source integrity: PASS
+CHECK RESULT: PASS
+Frontend single-file build: /mnt/data/GptNotion_Modular_TS_v3.0.0/frontend/dist/GptNotion.html (1,133,640 bytes)
+Build integrity: PASS (1,133,640 bytes)
+BUILD RESULT: PASS
+Browser smoke: PASS (title='Gpt노션 · RAG V2.4 FAST', version=3.0.0-modular, scripts=18)
+MCP HTTP smoke: PASS (port=37581, serverVersion=6.8.0-rag-v2.4-100k-fastpath, modular=6.9.0-modular)
+{"ok": true, "chunks": 100000, "insertMs": 832.1, "indexMs": 5561.2, "p50Ms": 31.22, "p95Ms": 39.73, "avgMs": 36.61, "topContainsSpecial": true}
+Release package: /mnt/data/GptNotion_Modular_TS_v3.0.0/release/GptNotion_3.0.0-modular
+Release zip: /mnt/data/GptNotion_Modular_TS_v3.0.0/release/GptNotion_3.0.0-modular.zip (377,720 bytes)
+Release smoke: PASS (377,720 bytes)
+VERIFY-ALL RESULT: PASS

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gptnotion://contracts/storage.schema.json",
+  "title": "GptNotion Storage Contract",
+  "type": "object",
+  "required": ["mode"],
+  "properties": {
+    "mode": { "type": "string", "enum": ["indexeddb", "localdb"] },
+    "localEngineUrl": { "type": "string" },
+    "sourceOfTruth": { "type": "string", "enum": ["indexeddb", "sqlite"] }
+  },
+  "additionalProperties": true
+}

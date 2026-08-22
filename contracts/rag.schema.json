@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gptnotion://contracts/rag.schema.json",
+  "title": "GptNotion RAG Hybrid Search Contract",
+  "$defs": {
+    "searchMode": { "type": "string", "enum": ["fast", "deep"] },
+    "request": {
+      "type": "object",
+      "required": ["query", "limit", "searchMode"],
+      "properties": {
+        "query": { "type": "string", "minLength": 1 },
+        "limit": { "type": "integer", "minimum": 1, "maximum": 50 },
+        "searchMode": { "$ref": "#/$defs/searchMode" },
+        "documentIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "authorityAware": { "type": "boolean" },
+        "parentExpansion": { "type": "boolean" },
+        "allowRemoteEmbedding": { "type": "boolean" },
+        "adaptiveRerank": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "item": {
+      "type": "object",
+      "required": ["documentId", "chunkId"],
+      "properties": {
+        "documentId": { "type": "string" },
+        "chunkId": { "type": "string" },
+        "title": { "type": "string" },
+        "headingPath": { "type": "string" },
+        "text": { "type": "string" },
+        "anchorText": { "type": "string" },
+        "contextText": { "type": "string" },
+        "score": { "type": "number" },
+        "authorityLevel": { "type": "number" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/request" },
+    {
+      "type": "object",
+      "required": ["items"],
+      "properties": {
+        "items": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "count": { "type": "integer", "minimum": 0 },
+        "retrievalMethod": { "type": "string" },
+        "timingMs": { "type": "object" }
+      },
+      "additionalProperties": true
+    }
+  ]
+}
