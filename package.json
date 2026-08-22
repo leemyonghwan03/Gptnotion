@@ -1,6 +1,6 @@
 {
   "name": "gptnotion-modular",
-  "version": "3.2.0-stabilization",
+  "version": "3.3.1-human-conversation",
   "private": true,
   "description": "Air-gapped GptNotion TypeScript + Python MCP modular workspace",
   "scripts": {

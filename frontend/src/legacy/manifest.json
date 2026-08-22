@@ -72,6 +72,6 @@
     {"name":"legacy-script-12","classic":true,"files":["12-patch.legacy.js"]},
     {"name":"legacy-script-13","classic":true,"files":["13-patch.legacy.js"]},
     {"name":"legacy-script-14","classic":true,"files":["14-patch.legacy.js"]},
-    {"name":"legacy-script-15","classic":true,"files":["15-patch.legacy.js","16-perf-reliability.legacy.js","17-stabilization.legacy.js"]}
+    {"name":"legacy-script-15","classic":true,"files":["15-patch.legacy.js","16-perf-reliability.legacy.js","17-stabilization.legacy.js","18-unified-ai-agent.legacy.js","19-human-conversation-tuning.legacy.js"]}
   ]
 }

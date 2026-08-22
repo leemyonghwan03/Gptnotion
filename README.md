@@ -62,3 +62,8 @@ baseline/              동결된 기준본
 ```
 
 기존 JS는 위험한 일괄 재작성 대신 52개 주요 기능 구간 + 기존 후속 패치 스크립트로 소스 분리하고, 빌드시 원래 스크립트 실행 의미를 보존하도록 재결합한다. 신규 기능은 원칙적으로 TypeScript/Python 모듈에 추가한다.
+
+
+## v3.3.1 Human Conversation Tuning
+
+The unified AI now preserves conversational goals, resolves short Korean follow-ups/corrections, interprets natural clarification answers, and defaults to tool-capable Agent behavior. See `docs/HUMAN_CONVERSATION_v3.3.1.md`.

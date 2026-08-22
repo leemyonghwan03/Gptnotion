@@ -1,6 +1,6 @@
 {
-  "appVersion": "3.2.0-stabilization",
-  "mcpVersion": "6.10.0-stabilization",
+  "appVersion": "3.3.1-human-conversation",
+  "mcpVersion": "6.11.0-unified-agent",
   "ragVersion": "2.4-fastpath-stabilized",
   "contractVersion": "1.0.0",
   "baseline": "RAG V2.4 FAST PATH / MCP 6.8"

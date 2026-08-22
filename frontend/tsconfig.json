@@ -34,6 +34,7 @@
     "src/ts/features/editor.ts",
     "src/ts/features/rag.ts",
     "src/ts/features/ai.ts",
+    "src/ts/features/agent.ts",
     "src/ts/features/search.ts",
     "src/ts/features/inbox.ts",
     "src/ts/features/export.ts",
