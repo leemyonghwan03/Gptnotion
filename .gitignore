@@ -1,0 +1,11 @@
+node_modules/
+frontend/dist/
+release/
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
