@@ -1,12 +1,13 @@
 {
   "name": "gptnotion-modular",
-  "version": "3.1.0-perf-reliability",
+  "version": "3.2.0-stabilization",
   "private": true,
   "description": "Air-gapped GptNotion TypeScript + Python MCP modular workspace",
   "scripts": {
     "typecheck": "tsc -p frontend/tsconfig.json --noEmit",
     "compile": "tsc -p frontend/tsconfig.json",
     "check": "python tools/forbidden_scan.py && tsc -p frontend/tsconfig.json --noEmit && python tools/check_contracts.py && python tools/check_legacy_js.py",
-    "build": "tsc -p frontend/tsconfig.json && python tools/build_frontend.py"
+    "build": "tsc -p frontend/tsconfig.json && python tools/build_frontend.py",
+    "stability": "python tests/stability_tools_smoke.py && python tests/sqlite_query_plan_smoke.py && python tests/rag_quality_smoke.py && python tests/mcp_restart_recovery_smoke.py"
   }
 }
