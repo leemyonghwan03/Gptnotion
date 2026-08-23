@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "none",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -31,6 +35,7 @@
     "src/ts/domain/link.ts",
     "src/ts/domain/database.ts",
     "src/ts/domain/settings.ts",
+    "src/ts/infrastructure/indexeddb-repository.ts",
     "src/ts/features/editor.ts",
     "src/ts/features/rag.ts",
     "src/ts/features/ai.ts",

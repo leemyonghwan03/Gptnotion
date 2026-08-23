@@ -16,6 +16,7 @@
 | 9 | Python MCP 패키지 모듈화 + extension registry | PASS |
 | 10 | AI / Operator / Automation / Team 모듈 경계 | PASS |
 | 11 | 통합검증, 단일 HTML build, Browser/MCP/100K RAG/Release | PASS |
+| 12 | Editor strangler: Page/Block Repository + CRUD/move/undo-redo + legacy thin wrapper | PASS |
 
 ## Final validation
 
@@ -48,3 +49,22 @@
 안정된 기존 1.1MB 런타임을 한 번에 TypeScript로 재작성하지 않았다. 대신 기존 기능을 소스 모듈로 격리하고 원래 실행 의미를 보존하는 compatibility layer를 만들었다. 이 선택은 기능 누락/회귀를 줄이기 위한 것이다.
 
 앞으로 새 기능은 TypeScript/Python 모듈에만 추가하고, legacy 기능을 개선할 때 해당 기능을 TS로 이전한 다음 legacy 구간을 제거한다. 따라서 프로젝트가 다시 단일 거대 HTML/거대 Python 파일로 회귀하지 않는다.
+
+## Stage 12 validation
+
+- `npm run check`: PASS — forbidden scan / TypeScript strict / contract / legacy syntax
+- Page/Block IndexedDB Repository 구현: PASS
+- 기존 `GptNotionDB`, version `3`, store/index 계약 유지: PASS
+- Block create/update/delete/move legacy↔TS parity: PASS
+- Page/Block undo/redo 및 `MAX 60` 동작: PASS
+- Block 삭제 시 mention link 정리 및 Cache/CacheIndex 동기화: PASS
+- LocalDB/Team/Database block undo는 compatibility seam 유지
+- Single-file `GptNotion.html`: PASS
+- `manifest.json` group/order: 변경 없음
+
+### Stage 12 cut line
+
+TS가 소유: 개인 Page/Block persistence, 일반 Editor block CRUD/move, Page/Block undo-redo 데이터 엔진.
+
+Legacy가 유지: Database/Table 상태, Team/Local storage compatibility, UI render/toast, VersionStore, AI/RAG.
+
